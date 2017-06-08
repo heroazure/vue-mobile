@@ -1,0 +1,68 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  line-height: 1.4;
+  font-size: @hlj-global-font-size;
+  color: @hlj-global-text-color;
+  font-family: @hlj-sansFont;
+  background-color: @hlj-page-default-bg-color;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a img {
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  &:hover,
+  &:visited,
+  &:focus,
+  &:link {
+    color: #fff;
+  }
+}
+
+ul, li {
+  list-style: none;
+}
+
+html, body {
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+//改写placeholder
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: @hlj-placeholder-color;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: @hlj-placeholder-color;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: @hlj-placeholder-color;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: @hlj-placeholder-color;
+
+}

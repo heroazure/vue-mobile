@@ -1,0 +1,42 @@
+@icon-font-path:'./';
+@icon-font-name:'fontello';
+@font-face {
+  font-family: 'fontello';
+  src: url('@{icon-font-path}@{icon-font-name}.ttf?v=4.4.0') format('truetype');/* Safari, Android, iOS */
+  //src: url('@{icon-font-path}@{icon-font-name}.eot?v=4.4.0');
+  //src: url('@{icon-font-path}@{icon-font-name}.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('@{icon-font-path}@{icon-font-name}.woff2?v=4.4.0') format('woff2'), url('@{icon-font-path}@{icon-font-name}.woff?v=4.4.0') format('woff'), url('@{icon-font-path}@{icon-font-name}.ttf?v=4.4.0') format('truetype'), url('@{icon-font-path}@{icon-font-name}.svg?v=4.4.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.active-effective(@opacity:.3){
+  &:active{
+    opacity: @opacity;
+  }
+}
+.hlj-icon{
+  display: inline-block;
+  font: normal normal normal 14px/1 fontello;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  .active-effective();
+  &-phone:before{
+    content: "\e800";
+  }
+  &-spinner:before{
+    content: "\f110";
+  }
+  &-wechat:before{
+    content: "\f1d7";
+  }
+  &-user:before{
+    content: "\e802";
+  }
+  &-lock-open-er:before{
+    content:"\e801";
+  }
+  &-help:before{
+    content:"\e803";
+  }
+}

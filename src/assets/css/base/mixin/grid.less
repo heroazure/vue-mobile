@@ -1,0 +1,52 @@
+.container(@gutter: @grid-gutter-width) {
+  padding-left:  floor((@gutter / 2));
+  padding-right: ceil((@gutter / 2));
+  .container-stretch();
+}
+
+.container-stretch() {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  &:extend(.clearfix all);
+}
+
+// Creates a wrapper for a series of columns
+.make-row(@gutter: @grid-gutter-width) {
+  margin-left:  ceil((@gutter / -2));
+  margin-right: floor((@gutter / -2));
+  &:extend(.clearfix all);
+}
+
+.loop-xs-column(@index) when (@index > 0) {
+  .calc-xs-column(@index);
+  .loop-xs-column((@index - 1))
+}
+.calc-xs-column(@index,@gutter: @grid-gutter-width){
+  .col-xs-@{index} {
+    position: relative;
+    float: left;
+    min-height: 1px;/*no*/
+    padding-left:  (@gutter / 2);
+    padding-right: (@gutter / 2);
+  }
+}
+
+//生成对应的宽度
+.calc-grid-column(@index, @class, @type) when (@type = width) and (@index > 0) {
+  .col-@{class}-@{index} {
+    width: percentage((@index / @grid-columns));
+  }
+}
+
+// 循环生成grid栅格
+.loop-grid-columns(@index, @class, @type) when (@index >= 0) {
+  .calc-grid-column(@index, @class, @type);
+  // 下一个
+  .loop-grid-columns((@index - 1), @class, @type);
+}
+
+.make-grid(@class:xs) {
+  .loop-xs-column(@grid-columns);
+  .loop-grid-columns(@grid-columns, @class, width);
+}

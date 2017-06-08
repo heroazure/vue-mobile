@@ -1,0 +1,32 @@
+//-------------------一些过渡和动画
+.page-enter-active,
+.page-leave-active {
+  transition: all .5s linear;
+}
+.page-enter{
+  opacity:0;
+  transform: translate3d(60%, 0, 0);
+}
+.page-leave-active{
+  display: none;
+}
+.error-enter-active,
+.error-leave-active {
+  transition: all .3s linear;
+}
+.error-enter{
+  transform: translate3d(30%, 0, 0);
+}
+.error-leave-active{
+  display: none;
+}
+.modal-enter-active,
+.modal-leave-active {
+  transition: opacity .3s ease;
+}
+.modal-enter{
+  opacity:0;
+}
+.modal-leave-active{
+  opacity:0;
+}
