@@ -5,9 +5,9 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import App from './App'
 import router from './router'
-import {Input} from 'vue-ydui/dist/lib.px/input'
-import {Button, ButtonGroup} from 'vue-ydui/dist/lib.px/button';
-import {CellGroup, CellItem} from 'vue-ydui/dist/lib.px/cell';
+import {Input} from 'vue-ydui/dist/lib.rem/input'
+import {Button, ButtonGroup} from 'vue-ydui/dist/lib.rem/button';
+import {CellGroup, CellItem} from 'vue-ydui/dist/lib.rem/cell';
 Vue.component(Input.name,Input)
 Vue.component(Button.name,Button)
 Vue.component(ButtonGroup.name,ButtonGroup)
