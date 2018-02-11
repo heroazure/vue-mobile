@@ -19,5 +19,12 @@ export default {
       data: data,
       method:'post'
     })
+  },
+  get2:(data = {})=>{
+    return ajax({
+      url: 'http://test.eshangtech.com:6060/HighWay/Handler/handler_ajax.ashx?action_type=getTotalServerPart',
+      data: data,
+      method:'get'
+    })
   }
 }

@@ -10,7 +10,11 @@ module.exports = {
         "not edge<100",
         "not firefox<100",
         "not opera<100"
-      ]
+      ],
+      /*"browsers": [
+        'iOS >= 7',
+        'Android >= 4.1'
+      ]*/
     },
     "postcss-px2rem":{
       baseDpr: 2,             // base device pixel ratio (default: 2)
