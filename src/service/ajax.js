@@ -27,7 +27,7 @@ export default ({
     axios(option).then(({data}) => {
       if (!selfHandleMsg) {
         if (data.status.retCode !== 0) {
-          alert(data.status.msg)
+          console.log(data.status.msg)
           reject()
         } else {
           resolve(data)
@@ -36,7 +36,7 @@ export default ({
         resolve(data)
       }
     }).catch(error => {
-      alert('网络异常，请重试...')
+      console.log('网络异常，请重试...')
       reject(error)
     })
   })

@@ -33,7 +33,7 @@
   </div>
 </template>
 <style scoped lang="less">
-  @import "../../assets/css/base/fn";
+  @import "~@base/fn";
 
   .list {
     margin-top: 10px;
@@ -76,7 +76,7 @@
   }
 </style>
 <script>
-  import api from 'service/book'
+  import api from '@service/book'
   export default{
     name: 'book',
     data(){

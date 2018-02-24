@@ -9,5 +9,6 @@ export default {
 }
 </script>
 
-<style src="./assets/css/index.less" lang="less">
+<style lang="less">
+  @import "~@assets/css/index";
 </style>
