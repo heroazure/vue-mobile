@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 let Book = (resolve) => require(['@views/book/Index'], resolve)
+let Suspensionball = (resolve) => require(['@views/suspensionball/Index'], resolve)
 
 Vue.use(Router)
 
-let routes =[
+let routes = [
   {
     path: '/',
     name: 'Book',
@@ -12,6 +13,14 @@ let routes =[
       title: 'book'
     },
     component: Book
+  },
+  {
+    path: '/ball',
+    name: 'ball',
+    meta: {
+      title: 'ball'
+    },
+    component: Suspensionball
   }
 ]
 const router = new Router({
