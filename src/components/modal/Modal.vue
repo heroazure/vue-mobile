@@ -7,10 +7,10 @@
 
 </style>
 <script>
-  export default{
-    name: 'hx-modal',
-    data(){
-      return {}
-    }
+export default{
+  name: 'hx-modal',
+  data () {
+    return {}
   }
+}
 </script>

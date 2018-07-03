@@ -36,7 +36,7 @@
   @import "~@base/fn";
 
   .list {
-    margin-top: 10px;
+    margin-top: 10px; /*no*/
     background-color: #fff;
     &-title {
       position: relative;
@@ -70,80 +70,80 @@
       top: 0;
       background-color: #f00;
       height: 100%;
-      width: 50px;/*no*/
+      width: 50px; /*no*/
       text-align: center;
     }
   }
 </style>
 <script>
-  import api from '@service/book'
-  export default{
-    name: 'book',
-    data(){
-      return {
-        bookName: '',
-        price: '',
-        books: [],
-        translateX: 0
+import api from '@service/book'
 
-      }
-    },
-    mounted(){
-      api.get()
+export default {
+  name: 'book',
+  data () {
+    return {
+      bookName: '',
+      price: '',
+      books: [],
+      translateX: 0
+    }
+  },
+  mounted () {
+    api.get()
+      .then(({data}) => {
+        this.books = data
+      })
+  },
+  methods: {
+    onSure () {
+      api.post({bookName: this.bookName, price: this.price})
         .then(({data}) => {
-          this.books = data
+          this.books.push(data)
         })
     },
-    methods: {
-      onSure(){
-        api.post({bookName: this.bookName, price: this.price})
-          .then(({data}) => {
-            this.books.push(data)
-          })
-      },
-      onTouchStartCell(e){
-        e.preventDefault()
-        this.timeout = setTimeout(() => {
-          alert('确认删除吗？')
-        }, 2000)
-      },
-      onTouchEndCell(){
-        clearTimeout(this.timeout)
-      },
-      onTouchStart1(e){
-        e.preventDefault()
-        this.startX = e.changedTouches[0].pageX
-        this.startY=e.changedTouches[0].pageY
-      },
-      onTouchMove1(e){
-        e.stopPropagation()
-        this.endX = e.changedTouches[0].pageX
-        this.endY=e.changedTouches[0].pageY
-        let bx=this.endX-this.startX
-        let by=this.endY-this.startY
-        //y方向的移动大于x方向的，认为是纵向移动
-        if(Math.abs(bx) - Math.abs(by)<0){
-            return
-        }
-        //左划
-        if (bx < 0) {
-          let len = Math.abs(this.translateX) + Math.abs(bx)
-          this.translateX = len >= 50 ? -50 : -len
-        } else {
-          let ln = this.translateX + bx
-          this.translateX = ln >= 0 ? 0 : ln
-        }
-      },
-      onTouchEnd1(){
-        if(Math.abs(this.translateX)>20){
-          this.translateX=-50
-        }else {
-          this.translateX=0
-        }
-      },
-      onDel1(){
-          alert('确认删除吗？')
+    onTouchStartCell (e) {
+      e.preventDefault()
+      this.timeout = setTimeout(() => {
+        alert('确认删除吗？')
+      }, 2000)
+    },
+    onTouchEndCell () {
+      clearTimeout(this.timeout)
+    },
+    onTouchStart1 (e) {
+      e.preventDefault()
+      this.startX = e.changedTouches[0].pageX
+      this.startY = e.changedTouches[0].pageY
+    },
+    onTouchMove1 (e) {
+      e.stopPropagation()
+      this.endX = e.changedTouches[0].pageX
+      this.endY = e.changedTouches[0].pageY
+      let bx = this.endX - this.startX
+      let by = this.endY - this.startY
+      // y方向的移动大于x方向的，认为是纵向移动
+      if (Math.abs(bx) - Math.abs(by) < 0) {
+        return
       }
+      // 左划
+      if (bx < 0) {
+        let len = Math.abs(this.translateX) + Math.abs(bx)
+        this.translateX = len >= 50 ? -50 : -len
+      } else {
+        let ln = this.translateX + bx
+        this.translateX = ln >= 0 ? 0 : ln
+      }
+    },
+    onTouchEnd1 () {
+      if (Math.abs(this.translateX) > 20) {
+        this.translateX = -50
+      } else {
+        this.translateX = 0
+      }
+    },
+    onDel1 () {
+      alert('确认删除吗？')
     }
   }
+}
 </script>

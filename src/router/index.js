@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 let Book = (resolve) => require(['@views/book/Index'], resolve)
 
 Vue.use(Router)
 
-let routes =[
+let routes = [
   {
     path: '/',
     name: 'Book',

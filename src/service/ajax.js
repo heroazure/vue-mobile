@@ -7,13 +7,13 @@ const timeout = 8000
 axios.defaults.baseURL = '/api/'
 axios.defaults.timeout = timeout
 export default ({
-                  url,
-                  data = {},
-                  method = 'get',
-                  selfHandleMsg = false,
-                  timeout = 8000,
-                  config
-                }) => {
+  url,
+  data = {},
+  method = 'get',
+  selfHandleMsg = false,
+  timeout = 8000,
+  config
+}) => {
   method = method.toLowerCase()
   let option = {
     url: url,
@@ -28,7 +28,7 @@ export default ({
       if (!selfHandleMsg) {
         if (data.status.retCode !== 0) {
           console.log(data.status.msg)
-          reject()
+          reject(new Error('codeError'))
         } else {
           resolve(data)
         }
@@ -36,7 +36,11 @@ export default ({
         resolve(data)
       }
     }).catch(error => {
-      console.log('网络异常，请重试...')
+      if (error.message === `timeout of ${timeout}ms exceeded`) {
+        console.log('请求超时,请检查网络...')
+      } else {
+        console.log('网络异常，请重试...')
+      }
       reject(error)
     })
   })

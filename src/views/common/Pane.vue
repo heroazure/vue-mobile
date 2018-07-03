@@ -7,11 +7,11 @@
 
 </style>
 <script>
-    export default{
-        data(){
-            return{
-              msg:'这是系统中一个相对普遍存在的模块'
-            }
-        }
+export default{
+  data () {
+    return {
+      msg: '这是系统中一个相对普遍存在的模块'
     }
+  }
+}
 </script>
