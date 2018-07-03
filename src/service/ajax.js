@@ -11,7 +11,7 @@ export default ({
                   data = {},
                   method = 'get',
                   selfHandleMsg = false,
-                  timeout = timeout,
+                  timeout = 8000,
                   config
                 }) => {
   method = method.toLowerCase()
