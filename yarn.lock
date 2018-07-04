@@ -4768,6 +4768,13 @@ postcss-ordered-values@^2.1.0:
     postcss "^5.0.4"
     postcss-value-parser "^3.0.1"
 
+postcss-px-to-viewport@^0.0.3:
+  version "0.0.3"
+  resolved "http://registry.npm.taobao.org/postcss-px-to-viewport/download/postcss-px-to-viewport-0.0.3.tgz#761259af20ad70adb01f503697337276d7831363"
+  dependencies:
+    object-assign "^4.0.1"
+    postcss "^5.0.2"
+
 postcss-reduce-idents@^2.2.2:
   version "2.4.0"
   resolved "http://registry.npm.taobao.org/postcss-reduce-idents/download/postcss-reduce-idents-2.4.0.tgz#c2c6d20cc958284f6abfbe63f7609bf409059ad3"
@@ -4828,6 +4835,12 @@ postcss-value-parser@^3.0.1, postcss-value-parser@^3.0.2, postcss-value-parser@^
   version "3.3.0"
   resolved "http://registry.npm.taobao.org/postcss-value-parser/download/postcss-value-parser-3.3.0.tgz#87f38f9f18f774a4ab4c8a232f5c5ce8872a9d15"
 
+postcss-viewport-units@^0.1.4:
+  version "0.1.4"
+  resolved "http://registry.npm.taobao.org/postcss-viewport-units/download/postcss-viewport-units-0.1.4.tgz#33dc3f9ae659a7a5ae5ea889c83612a526c52a9a"
+  dependencies:
+    postcss "^5.2.8"
+
 postcss-zindex@^2.0.1:
   version "2.2.0"
   resolved "http://registry.npm.taobao.org/postcss-zindex/download/postcss-zindex-2.2.0.tgz#d2109ddc055b91af67fc4cb3b025946639d2af22"
@@ -4836,7 +4849,7 @@ postcss-zindex@^2.0.1:
     postcss "^5.0.4"
     uniqs "^2.0.0"
 
-postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.2, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.6, postcss@^5.0.8, postcss@^5.2.16:
+postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.2, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.6, postcss@^5.0.8, postcss@^5.2.16, postcss@^5.2.8:
   version "5.2.18"
   resolved "http://registry.npm.taobao.org/postcss/download/postcss-5.2.18.tgz#badfa1497d46244f6390f58b319830d9107853c5"
   dependencies:

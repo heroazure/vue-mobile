@@ -4,17 +4,8 @@
  */
 import accounting from 'accounting'
 import bus from './bus'
-import {Input} from 'vue-ydui/dist/lib.rem/input'
-import {Button, ButtonGroup} from 'vue-ydui/dist/lib.rem/button'
-import {CellGroup, CellItem} from 'vue-ydui/dist/lib.rem/cell'
 
-const components = {
-  [Input.name]: Input,
-  [Button.name]: Button,
-  [ButtonGroup.name]: ButtonGroup,
-  [CellGroup.name]: CellGroup,
-  [CellItem.name]: CellItem
-}
+const components = {}
 
 const doPrototype = (vue) => {
   accounting.settings = {
