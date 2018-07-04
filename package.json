@@ -59,6 +59,7 @@
     "postcss-px-to-viewport": "^0.0.3",
     "postcss-url": "^7.2.1",
     "postcss-viewport-units": "^0.1.4",
+    "postcss-write-svg": "^3.0.1",
     "px2rem-loader": "^0.1.9",
     "rimraf": "^2.6.0",
     "semver": "^5.3.0",

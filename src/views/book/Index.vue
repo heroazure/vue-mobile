@@ -12,6 +12,7 @@
     <AspectBox :ratio="5" width="200px">
       <div class="test5"></div>
     </AspectBox>
+    <div class="example">example</div>
   </div>
 </template>
 <style scoped lang="less">
@@ -40,10 +41,24 @@
       right: 0;
     }
   }
+
   .test5 {
     width: 100%;
     height: 100%;
     background: #000;
+  }
+
+  @svg px1-border {
+    height: 2px;
+  @rect {
+    fill: var(--color, black);
+    width: 100%;
+    height: 50%;
+  }
+  }
+  .example {
+    border: 1px solid transparent;
+    border-image: svg(px1-border param(--color #00b1ff)) 2 2 stretch;
   }
 </style>
 <script>

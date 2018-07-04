@@ -4841,6 +4841,13 @@ postcss-viewport-units@^0.1.4:
   dependencies:
     postcss "^5.2.8"
 
+postcss-write-svg@^3.0.1:
+  version "3.0.1"
+  resolved "http://registry.npm.taobao.org/postcss-write-svg/download/postcss-write-svg-3.0.1.tgz#76e495d40f2321ff09b56487e03845af737f801a"
+  dependencies:
+    postcss "^5.2.6"
+    postcss-value-parser "^3.3.0"
+
 postcss-zindex@^2.0.1:
   version "2.2.0"
   resolved "http://registry.npm.taobao.org/postcss-zindex/download/postcss-zindex-2.2.0.tgz#d2109ddc055b91af67fc4cb3b025946639d2af22"
@@ -4849,7 +4856,7 @@ postcss-zindex@^2.0.1:
     postcss "^5.0.4"
     uniqs "^2.0.0"
 
-postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.2, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.6, postcss@^5.0.8, postcss@^5.2.16, postcss@^5.2.8:
+postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.2, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.6, postcss@^5.0.8, postcss@^5.2.16, postcss@^5.2.6, postcss@^5.2.8:
   version "5.2.18"
   resolved "http://registry.npm.taobao.org/postcss/download/postcss-5.2.18.tgz#badfa1497d46244f6390f58b319830d9107853c5"
   dependencies:
