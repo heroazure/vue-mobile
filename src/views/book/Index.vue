@@ -13,6 +13,7 @@
       <div class="test5"></div>
     </AspectBox>
     <div class="example">example</div>
+    <router-link :to="{path: '/demo'}">to demo</router-link>
   </div>
 </template>
 <style scoped lang="less">
